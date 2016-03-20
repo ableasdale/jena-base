@@ -1,9 +1,8 @@
 package com.xmlmachines.jena;
 
-import com.xmlmachines.jena.util.Consts;
+import com.xmlmachines.jena.util.SparqlEndpoints;
 import com.xmlmachines.jena.util.SparqlQueries;
 import org.apache.jena.query.*;
-import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,8 +21,8 @@ public class Soton {
         Query query = QueryFactory.create(SparqlQueries.FIVE_PREDICATE_URIS);
 //        QueryExecution qexec = new QueryEngineHTTP(sparqlEndPoint, qString3) ;
 
-        try (QueryExecution qexec = //new QueryEngineHTTP(Consts.SOUTHAMPTON_UNI_SPARQL_ENDPOINT, query)){
-                     QueryExecutionFactory.sparqlService(Consts.SOUTHAMPTON_UNI_SPARQL_ENDPOINT, query)) {
+        try (QueryExecution qexec = //new QueryEngineHTTP(SparqlEndpoints.SOUTHAMPTON_UNI_SPARQL_ENDPOINT, query)){
+                     QueryExecutionFactory.sparqlService(SparqlEndpoints.SOUTHAMPTON_UNI_SPARQL_ENDPOINT, query)) {
             ResultSet results = qexec.execSelect();
             for (; results.hasNext(); ) {
                 QuerySolution qs = results.nextSolution();

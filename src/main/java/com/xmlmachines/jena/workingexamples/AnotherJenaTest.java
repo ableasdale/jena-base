@@ -1,6 +1,6 @@
 package com.xmlmachines.jena.workingexamples;
 
-import com.xmlmachines.jena.util.Consts;
+import com.xmlmachines.jena.util.SparqlEndpoints;
 import com.xmlmachines.jena.util.SparqlQueries;
 import org.apache.jena.query.*;
 import org.slf4j.Logger;
@@ -35,7 +35,7 @@ public class AnotherJenaTest {
                         " }";
 
         Query query = QueryFactory.create(SparqlQueries.SELECT_DISTINCT_CONCEPTS);
-        QueryExecution qexec = QueryExecutionFactory.sparqlService(Consts.DBPEDIA_SPARQL_ENDPOINT, query);
+        QueryExecution qexec = QueryExecutionFactory.sparqlService(SparqlEndpoints.DBPEDIA_SPARQL_ENDPOINT, query);
 
 
         LOG.info(ResultSetFormatter.asText(qexec.execSelect()));
