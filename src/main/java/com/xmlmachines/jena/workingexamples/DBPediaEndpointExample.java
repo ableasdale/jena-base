@@ -17,7 +17,7 @@ public class DBPediaEndpointExample {
 
         Logger LOG = LoggerFactory.getLogger(DBPediaEndpointExample.class);
 
-        Query query = QueryFactory.create(SparqlQueries.DBPEDIA_SELECT_DISTINCT_CONCEPTS);
+        Query query = QueryFactory.create(SparqlQueries.SELECT_DISTINCT_CONCEPTS);
 
         try (QueryExecution qexec = QueryExecutionFactory.sparqlService(SparqlEndpoints.DBPEDIA_SPARQL_ENDPOINT, query)) {
             ResultSet results = qexec.execSelect();

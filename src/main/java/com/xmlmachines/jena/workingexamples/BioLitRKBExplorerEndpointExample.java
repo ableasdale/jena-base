@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * A Short Biographical Dictionary of English Literature (RKBExplorer)
+ *
  * biolit.rkbexplorer.com
  *
  * Created by ableasdale on 20/03/2016.

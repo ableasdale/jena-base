@@ -9,4 +9,5 @@ public class SparqlEndpoints {
     public static String SOUTHAMPTON_UNI_SPARQL_ENDPOINT = "http://sparql.data.southampton.ac.uk/sparqlfront/";
     public static String LINKED_GEODATA_SPARQL_ENDPOINT = "http://linkedgeodata.org/sparql";
     public static String BIOLIT_RKBEXPLORER_SPARQL_ENDPOINT = "http://biolit.rkbexplorer.com/sparql/";
+    public static String AEMET_METEROLOGICAL_DATASET_SPARQL_ENDPOINT = "http://aemet.linkeddata.es/sparql";
 }

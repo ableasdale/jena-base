@@ -34,7 +34,7 @@ public class AnotherJenaTest {
                         " FILTER ( lang(?d) = 'fr' )" +
                         " }";
 
-        Query query = QueryFactory.create(SparqlQueries.DBPEDIA_SELECT_DISTINCT_CONCEPTS);
+        Query query = QueryFactory.create(SparqlQueries.SELECT_DISTINCT_CONCEPTS);
         QueryExecution qexec = QueryExecutionFactory.sparqlService(SparqlEndpoints.DBPEDIA_SPARQL_ENDPOINT, query);
 
 
