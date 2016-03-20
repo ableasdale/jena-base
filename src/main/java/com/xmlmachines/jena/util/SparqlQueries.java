@@ -5,7 +5,7 @@ package com.xmlmachines.jena.util;
  */
 public class SparqlQueries {
 
-    public static String SELECT_DISTINCT_CONCEPTS = "select distinct ?Concept where {[] a ?Concept} LIMIT 200";
+    public static String SELECT_DISTINCT_CONCEPTS = "select distinct ?Concept where {[] a ?Concept} LIMIT 500";
     public static String SELECT_FIRST_TEN = "SELECT * WHERE {?s ?p ?o .} LIMIT 10";
     public static String THREE_SUBJECT_URIS =  "SELECT ?subject WHERE {?subject ?p ?o } LIMIT 3";
     public static String FIVE_PREDICATE_URIS = "SELECT ?predicate WHERE { ?s ?predicate ?o } LIMIT 5";

@@ -19,7 +19,16 @@ public class WKCourtsThesaurusEndpointExample {
                 "{ ?Concept skos:prefLabel ?prefLabel . FILTER (regex(str(?prefLabel), '^a.*', 'i'))  }\n" +
                 "} ORDER BY ?prefLabel LIMIT 50 OFFSET 0";
 
-        Query query = QueryFactory.create(queryString);
+        String moreComplexQuery = "PREFIX skos:<http://www.w3.org/2004/02/skos/core#>\n" +
+                "SELECT ?prefLabel ?altLabel ?scopeNote\n" +
+                "WHERE\n" +
+                "{\n" +
+                "?s skos:prefLabel ?prefLabel .\n" +
+                "?s skos:altLabel ?altLabel .\n" +
+                "?s skos:scopeNote ?scopeNote .\n" +
+                " } LIMIT 50 OFFSET 0";
+
+        Query query = QueryFactory.create(moreComplexQuery);
         //Query query = QueryFactory.create(SparqlQueries.SELECT_DISTINCT_CONCEPTS);
         QueryExecution qexec = QueryExecutionFactory.sparqlService(SparqlEndpoints.COURTS_THESAURUS_SPARQL_ENDPOINT, query);
         LOG.info(ResultSetFormatter.asText(qexec.execSelect()));
