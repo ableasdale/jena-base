@@ -1,5 +1,7 @@
-package com.xmlmachines.jena;
+package com.xmlmachines.jena.workingexamples;
 
+import com.xmlmachines.jena.util.Consts;
+import com.xmlmachines.jena.util.SparqlQueries;
 import org.apache.jena.query.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,10 +34,8 @@ public class AnotherJenaTest {
                         " FILTER ( lang(?d) = 'fr' )" +
                         " }";
 
-        String q2 = "select distinct ?Concept where {[] a ?Concept} LIMIT 200";
-
-        Query query = QueryFactory.create(q2);
-        QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
+        Query query = QueryFactory.create(SparqlQueries.SELECT_DISTINCT_CONCEPTS);
+        QueryExecution qexec = QueryExecutionFactory.sparqlService(Consts.DBPEDIA_SPARQL_ENDPOINT, query);
 
 
         LOG.info(ResultSetFormatter.asText(qexec.execSelect()));

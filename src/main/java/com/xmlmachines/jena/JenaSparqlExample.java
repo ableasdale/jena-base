@@ -7,6 +7,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * FAILS with org.apache.jena.atlas.json.JsonParseException: Not a JSON object START
+ *
  * @author Simon Jupp
  * @date 11/09/2013
  * Functional Genomics Group EMBL-EBI
