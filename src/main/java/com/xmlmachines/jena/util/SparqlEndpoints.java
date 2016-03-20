@@ -14,4 +14,5 @@ public class SparqlEndpoints {
     public static String CHEMICAL_ENTITIES_SPARQL_ENDPOINT = "http://chebi.bio2rdf.org/sparql";
     public static String FOODPEDIA_SPARQL_ENDPOINT = "http://foodpedia.tk/sparql";
     public static String COURTS_THESAURUS_SPARQL_ENDPOINT = "http://vocabulary.wolterskluwer.de/PoolParty/sparql/court";
+    public static String IMAGESNIPPETS_SPARQL_ENDPOINT = "http://www.imagesnippets.com/sparql/images";
 }
