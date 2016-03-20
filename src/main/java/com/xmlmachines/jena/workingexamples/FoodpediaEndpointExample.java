@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 public class FoodpediaEndpointExample {
 
     public static void main(String[] args) {
-        Logger LOG = LoggerFactory.getLogger(ChemicalEntitiesEndpointExample.class);
+        Logger LOG = LoggerFactory.getLogger(FoodpediaEndpointExample.class);
         Query query = QueryFactory.create(SparqlQueries.SELECT_DISTINCT_CONCEPTS);
         QueryExecution qexec = QueryExecutionFactory.sparqlService(SparqlEndpoints.FOODPEDIA_SPARQL_ENDPOINT, query);
         LOG.info(ResultSetFormatter.asText(qexec.execSelect()));
