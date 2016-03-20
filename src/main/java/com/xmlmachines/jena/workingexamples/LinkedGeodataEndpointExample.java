@@ -9,10 +9,10 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by ableasdale on 19/03/2016.
  */
-public class SimpleJenaQuery {
+public class LinkedGeodataEndpointExample {
     public static void main(String[] args) {
 
-        Logger LOG = LoggerFactory.getLogger(SimpleJenaQuery.class);
+        Logger LOG = LoggerFactory.getLogger(LinkedGeodataEndpointExample.class);
 
         //QuerySolutionMap initialBinding = new QuerySolutionMap();
         //initialBinding.add("name", personResource);

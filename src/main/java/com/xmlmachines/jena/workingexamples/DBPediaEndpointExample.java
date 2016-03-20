@@ -7,17 +7,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Working
+ * Working example using the DBPedia SPARQL endpoint
  *
  * Created by ableasdale on 20/03/2016.
  */
-public class AndAnotherJenaTest {
+public class DBPediaEndpointExample {
 
     public static void main(String[] args) {
 
-        Logger LOG = LoggerFactory.getLogger(AndAnotherJenaTest.class);
+        Logger LOG = LoggerFactory.getLogger(DBPediaEndpointExample.class);
 
-        Query query = QueryFactory.create(SparqlQueries.SELECT_DISTINCT_CONCEPTS);
+        Query query = QueryFactory.create(SparqlQueries.DBPEDIA_SELECT_DISTINCT_CONCEPTS);
 
         try (QueryExecution qexec = QueryExecutionFactory.sparqlService(SparqlEndpoints.DBPEDIA_SPARQL_ENDPOINT, query)) {
             ResultSet results = qexec.execSelect();
