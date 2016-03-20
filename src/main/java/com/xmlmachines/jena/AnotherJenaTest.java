@@ -35,7 +35,7 @@ public class AnotherJenaTest {
         String q2 = "select distinct ?Concept where {[] a ?Concept} LIMIT 200";
 
         Query query = QueryFactory.create(q2);
-            QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
+        QueryExecution qexec = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query);
 
 
         LOG.info(ResultSetFormatter.asText(qexec.execSelect()));
